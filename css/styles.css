@@ -1061,8 +1061,8 @@ ul {
   display: flex; /* Для выравнивания по центру */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
-  opacity: 1; /* По умолчанию скрыто */
-  pointer-events: auto;
+  opacity: 0; /* По умолчанию скрыто */
+  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
               visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
