@@ -367,6 +367,7 @@ ul {
  }
 .contacts-mobile-menu{
   font-style: normal;
+  margin-bottom: 48px;
 }
 .contacts-list-mobile {
   display: flex;
@@ -374,7 +375,7 @@ ul {
   justify-content: flex-start;
   flex-direction: column;
   gap: 24px;
-  margin-bottom: 48px;
+  
 
  
 }
@@ -445,7 +446,19 @@ ul {
 
 /* resolutions */
 
-@media (min-resolution: 2x) {
+/* Для мобильных устройств (до 767px) */
+@media (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-scrset/hero-img-mobile-min.jpg);
+  }
+}
+
+/* Для мобильных устройств с высоким разрешением (до 767px, 2x) */
+@media (max-width: 767px) and (min-resolution: 2x) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -455,6 +468,7 @@ ul {
   }
 }
 
+/* Для планшетов (768px и выше) */
 @media (min-width: 768px) {
   .hero {
     background-image: linear-gradient(
@@ -465,6 +479,7 @@ ul {
   }
 }
 
+/* Для планшетов с высоким разрешением (768px и выше, 2x) */
 @media (min-width: 768px) and (min-resolution: 2x) {
   .hero {
     background-image: linear-gradient(
@@ -475,6 +490,7 @@ ul {
   }
 }
 
+/* Для десктопа (1158px и выше) */
 @media (min-width: 1158px) {
   .hero {
     background-image: linear-gradient(
@@ -485,7 +501,8 @@ ul {
   }
 }
 
-@media (min-width: 1157px) and (min-resolution: 2x) {
+/* Для десктопа с высоким разрешением (1158px и выше, 2x) */
+@media (min-width: 1158px) and (min-resolution: 2x) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -498,7 +515,7 @@ ul {
 
 
 .main-header{
-    margin: 0 auto;
+  margin: 0 auto;
   margin-bottom: 72px;
   max-width: 216px;
   font-weight: 700;
@@ -620,7 +637,7 @@ ul {
 .features-list {
   flex-direction: row;
   flex-wrap: wrap;
-   column-gap: 24px;
+  column-gap: 24px;
 }
 
 .feature {
@@ -639,7 +656,7 @@ ul {
   .text-feature{
     font-weight: 400;
   }
-  
+
   .icon-box-feature{
   display: flex;
 }
@@ -654,7 +671,7 @@ ul {
   width: 264px;
   height: 112px;
   background: #f4f4fd;
-  margin-bottom: 8px;
+
 }
 
 .feature {
@@ -960,6 +977,7 @@ ul {
 .logo-text {
   display: block;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
@@ -1114,9 +1132,11 @@ ul {
   }
   
   .footer-all{
-    margin-left: 0;
+    justify-content: center;
     gap: 0;
+    flex-wrap: nowrap;
   }
+
   .footer-block {
     
     margin-right: 120px;
